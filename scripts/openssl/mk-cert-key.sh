@@ -30,4 +30,4 @@ OUTPUT_CERT=$OUTPUT_DIR/$CN.cert.pem
 [ -d $OUTPUT_DIR ] || mkdir $OUTPUT_DIR
 echo subjectAltName = IP.1:127.0.0.1 > $OUTPUT_EXT
 openssl req -new -sha256 -keyout $OUTPUT_KEY -out $OUTPUT_CSR -days 365 -newkey rsa:2048 -nodes -subj "$subj"
-openssl x509 -req -days 365 -sha1 -CA $CA_CERT -CAkey $CA_KEY -CAcreateserial -in $OUTPUT_CSR -extfile $OUTPUT_EXT -out $OUTPUT_CERT
+openssl x509 -req -days 365 -sha1 -CAcreateserial -CA $CA_CERT -CAkey $CA_KEY -in $OUTPUT_CSR -extfile $OUTPUT_EXT -out $OUTPUT_CERT

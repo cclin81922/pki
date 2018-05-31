@@ -51,6 +51,7 @@ bash scripts/openssl/mk-cert-key.sh 192.168.33.101.xip.io
 # Inspect
 
 * Inspect CN of a cert
+* Inspect SANs of a cert
 
 Inspect CN of a cert with openssl
 
@@ -59,6 +60,12 @@ openssl x509 -in <cert> -text -noout | grep Subject | grep CN
 openssl x509 -in data/ca/ca.cclin/ca.cert.pem -text -noout | grep Subject | grep CN
 ```
 
+Inspect SANs of a cert with openssl
+
+```
+openssl x509 -in <cert> -text -noout | egrep 'IP|DNS'
+openssl x509 -in data/ca/ca.cclin/ca.cert.pem -text -noout | egrep 'IP|DNS'
+```
 
 # Check
 
@@ -73,5 +80,7 @@ openssl x509 -in data/ca/ca.cclin/ca.cert.pem -text -noout | grep Subject | grep
 * https://kubernetes.io/docs/concepts/cluster-administration/certificates/
 * https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/
 * https://hackmd.io/xrDSH8uuQPeOsUoY2Xz8uw
-* https://geekflare.com/san-ssl-certificate/
-* https://github.com/chef-cookbooks/openssl/issues/37
+* SANs https://geekflare.com/san-ssl-certificate/
+* SANs https://github.com/chef-cookbooks/openssl/issues/37
+* .srl file http://www.gutizz.com/openssl-creates-ca-serial-file/
+* .srl file http://users.skynet.be/pascalbotte/art/server-cert.htm
