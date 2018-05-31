@@ -69,6 +69,15 @@ openssl x509 -in data/ca/ca.cclin/ca.cert.pem -text -noout | egrep 'IP|DNS'
 
 # Check
 
+* Check if cert is signed by given ca cert
+
+Check if cert is signed by given ca cert
+
+```
+openssl verify -CAfile <ca cert> <cert> 
+openssl verify -CAfile data/ca/ca.cclin/ca.cert.pem data/certs-signed-by-ca.cclin/www.cc.lin/www.cc.lin.cert.pem 
+```
+
 # Load
 
 # Related Resources
