@@ -85,7 +85,7 @@ openssl verify -CAfile data/ca/ca.cclin/ca.cert.pem data/certs-signed-by-ca.ccli
   * Windows
   * Linux (Ubuntu)
   * Linux (CentOS)
-* Adding trusted root certificates to the browser
+* [Adding trusted root certificates to the browser](https://www.bounca.org/tutorials/install_root_certificate.html)
   * Chrome
   * Firefox
 * Docker loads ca cert which is located in `/etc/docker/certs.d/`
