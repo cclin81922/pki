@@ -36,7 +36,29 @@ root cert
 
 # Create
 
+* Create new cert and key with existing ca
+
+
+Create new cert and key with existing ca
+
+```
+bash scripts/mk-cert-key.sh <CN>
+bash scripts/mk-cert-key.sh www.cc.lin
+bash scripts/mk-cert-key.sh 192.168.33.101
+bash scripts/mk-cert-key.sh 192.168.33.101.xip.io
+```
+
 # Inspect
+
+* Inspect CN of a cert
+
+Inspect CN of a cert with openssl
+
+```
+openssl x509 -in <cert> -text -noout | grep Subject | grep CN
+openssl x509 -in data/ca/ca.cclin/ca.cert.pem -text -noout | grep Subject | grep CN
+```
+
 
 # Check
 
