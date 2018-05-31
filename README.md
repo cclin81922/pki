@@ -8,12 +8,23 @@ To make key and cert, there are 3 options of tool ([example usage](https://kuber
 
 # Chain
 
+a.k.a. `certification path` or `signature hierarchy`
+
+4 tier
+
+```
+root cert
+|_ _ intermediateA cert (signed by root cert)
+	 |_ _ intermediateB cert (signed by intermediateA cert)
+	  	  |_ _ server/client cert (signed by intermediateB cert)
+```
+
 3 tier
 
 ```
 root cert
 |_ _ intermediate cert (signed by root cert)
-	  |_ _ server/client cert (signed by intermediate cert)
+	 |_ _ server/client cert (signed by intermediate cert)
 ```
 
 2 tier
