@@ -42,10 +42,10 @@ root cert
 Create new cert and key with existing ca
 
 ```
-bash scripts/mk-cert-key.sh <CN>
-bash scripts/mk-cert-key.sh www.cc.lin
-bash scripts/mk-cert-key.sh 192.168.33.101
-bash scripts/mk-cert-key.sh 192.168.33.101.xip.io
+bash scripts/openssl/mk-cert-key.sh <CN>
+bash scripts/openssl/mk-cert-key.sh www.cc.lin
+bash scripts/openssl/mk-cert-key.sh 192.168.33.101
+bash scripts/openssl/mk-cert-key.sh 192.168.33.101.xip.io
 ```
 
 # Inspect
