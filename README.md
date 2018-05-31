@@ -6,6 +6,31 @@ To make key and cert, there are 3 options of tool ([example usage](https://kuber
 * openssl
 * cfssl
 
+# Chain
+
+3 tier
+
+```
+root cert
+|_ _ intermediate cert (signed by root cert)
+	  |_ _ server/client cert (signed by intermediate cert)
+```
+
+2 tier
+
+```
+root cert
+|_ _ server/client cert (signed by root cert)
+```
+
+# Create
+
+# Inspect
+
+# Check
+
+# Load
+
 # Related Resources
 
 * Evernote :: OpenSSL
