@@ -8,3 +8,5 @@
 * https://github.com/cloudflare/cfssl
 * https://kubernetes.io/docs/concepts/cluster-administration/certificates/
 * https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/
+* https://hackmd.io/xrDSH8uuQPeOsUoY2Xz8uw
+* https://geekflare.com/san-ssl-certificate/
