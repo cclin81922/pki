@@ -80,6 +80,25 @@ openssl verify -CAfile data/ca/ca.cclin/ca.cert.pem data/certs-signed-by-ca.ccli
 
 # Load
 
+* Docker loads ca cert which is located in `/etc/docker/certs.d/`
+* Docker-for-mac loads ca cert which is located in `~/.docker/certs.d/`
+
+Docker loads ca cert which is located in `/etc/docker/certs.d/`
+
+```
+/etc/docker/certs.d/
+|_ _ <MyRegistry>:<Port>
+	 |_ _ca.crt
+```
+
+Docker-for-mac loads ca cert which is located in `~/.docker/certs.d/`
+
+```
+~/.docker/certs.d/
+|_ _ <MyRegistry>:<Port>
+	 |_ _ca.crt
+```
+
 # Related Resources
 
 * Evernote :: OpenSSL
@@ -93,3 +112,4 @@ openssl verify -CAfile data/ca/ca.cclin/ca.cert.pem data/certs-signed-by-ca.ccli
 * SANs https://github.com/chef-cookbooks/openssl/issues/37
 * .srl file http://www.gutizz.com/openssl-creates-ca-serial-file/
 * .srl file http://users.skynet.be/pascalbotte/art/server-cert.htm
+* https://docs.docker.com/docker-for-mac/#directory-structures-for-certificates
