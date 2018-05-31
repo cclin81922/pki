@@ -107,6 +107,10 @@ GitLab loads server cert and server key which are located in `/etc/gitlab/ssl/`
 |_ _ <CN>.key <CN>.crt
 ```
 
+# Note
+
+* [Chrome 58 以上版本只會使用 subjectAlternativeName 延伸 (而非 commonName) 來比對網域名稱和網站憑證。](https://support.google.com/chrome/a/answer/7391219?hl=zh-Hant)
+
 # Related Resources
 
 * Evernote :: OpenSSL
