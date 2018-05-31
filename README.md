@@ -74,3 +74,4 @@ openssl x509 -in data/ca/ca.cclin/ca.cert.pem -text -noout | grep Subject | grep
 * https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/
 * https://hackmd.io/xrDSH8uuQPeOsUoY2Xz8uw
 * https://geekflare.com/san-ssl-certificate/
+* https://github.com/chef-cookbooks/openssl/issues/37

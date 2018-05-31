@@ -19,6 +19,7 @@ O=cclin
 OU=cclin
 CN=$CN
 emailAddress=no-reply@CN
+subj="/C=$C/ST=$ST/L=$L/O=$O/OU=$OU/CN=$CN/emailAddress=$emailAddress"
 
 OUTPUT_DIR=$(dirname $0)/../../data/certs-signed-by-ca.cclin/$CN
 OUTPUT_EXT=$OUTPUT_DIR/$CN.ext
@@ -26,8 +27,7 @@ OUTPUT_CSR=$OUTPUT_DIR/$CN.csr
 OUTPUT_KEY=$OUTPUT_DIR/$CN.key.pem
 OUTPUT_CERT=$OUTPUT_DIR/$CN.cert.pem
 
-[-d $OUTPUT_DIR ] || mkdir $OUTPUT_DIR
-touch $OUTPUT_EXT
-touch $OUTPUT_CSR
-touch $OUTPUT_KEY
-touch $OUTPUT_CERT
+[ -d $OUTPUT_DIR ] || mkdir $OUTPUT_DIR
+echo subjectAltName = IP.1:127.0.0.1 > $OUTPUT_EXT
+openssl req -new -sha256 -keyout $OUTPUT_KEY -out $OUTPUT_CSR -days 365 -newkey rsa:2048 -nodes -subj "$subj"
+openssl x509 -req -days 365 -sha1 -CA $CA_CERT -CAkey $CA_KEY -CAcreateserial -in $OUTPUT_CSR -extfile $OUTPUT_EXT -out $OUTPUT_CERT
