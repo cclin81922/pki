@@ -80,7 +80,7 @@ openssl verify -CAfile data/ca/ca.cclin/ca.cert.pem data/certs-signed-by-ca.ccli
 
 # Load
 
-* [Adding trusted root certificates to the server](https://manuals.gfi.com/en/kerio/connect/content/server-configuration/ssl-certificates/adding-trusted-root-certificates-to-the-server-1605.html)
+* [Adding trusted root certificates to the operating system](https://manuals.gfi.com/en/kerio/connect/content/server-configuration/ssl-certificates/adding-trusted-root-certificates-to-the-server-1605.html)
   * Mac OS X
   * Windows
   * Linux (Ubuntu)
