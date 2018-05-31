@@ -1,5 +1,11 @@
 # pki
 
+To make key and cert, there are 3 options of tool ([example usage](https://kubernetes.io/docs/concepts/cluster-administration/certificates/))
+
+* easyrsa
+* openssl
+* cfssl
+
 # Related Resources
 
 * Evernote :: OpenSSL
