@@ -82,6 +82,7 @@ openssl verify -CAfile data/ca/ca.cclin/ca.cert.pem data/certs-signed-by-ca.ccli
 
 * Docker loads ca cert which is located in `/etc/docker/certs.d/`
 * Docker-for-mac loads ca cert which is located in `~/.docker/certs.d/`
+* GitLab loads server cert and server key which are located in `/etc/gitlab/ssl/`
 
 Docker loads ca cert which is located in `/etc/docker/certs.d/`
 
@@ -97,6 +98,13 @@ Docker-for-mac loads ca cert which is located in `~/.docker/certs.d/`
 ~/.docker/certs.d/
 |_ _ <MyRegistry>:<Port>
 	 |_ _ca.crt
+```
+
+GitLab loads server cert and server key which are located in `/etc/gitlab/ssl/`
+
+```
+/etc/gitlab/ssl/
+|_ _ <CN>.key <CN>.crt
 ```
 
 # Related Resources
