@@ -119,6 +119,7 @@ GitLab loads server cert and server key which are located in `/etc/gitlab/ssl/`
 
 * [Chrome 56 以上版本不支援 SHA-1 憑證](https://security.googleblog.com/2016/11/sha-1-certificates-in-chrome.html)
 * [Chrome 58 以上版本只會使用 subjectAlternativeName 延伸 (而非 commonName) 來比對網域名稱和網站憑證。](https://support.google.com/chrome/a/answer/7391219?hl=zh-Hant)
+* [macOS 內建的 curl 指令不支援 PEM 格式的憑證](https://github.com/curl/curl/issues/283)
 
 # Related Resources
 
